@@ -1,0 +1,605 @@
+$set matout "'D:\XXX\result.gdx',scale_factor,ssolver,smodel";
+$gdxin "D:\XXX\input.gdx"
+*route needs to be specified
+
+Sets
+    state  operating points          /1*10/
+    comp   component                 /1/
+    state_low(state)                 /6*9/
+    state_high(state)                /1,2,3,4,10/
+    state_v(state)                   /2,3,4,5,6,7,8/
+    state_l(state)                   /1,2,3,7,8,9,10/
+;
+alias(comp,comp1);
+
+Parameters
+*component parameters
+*Isobutene---------
+*omega(comp)           -    /'1' 0.193/
+*Tc(comp)              K    /'1' 418.09/
+*Pc(comp)              Mpa  /'1' 4.0098/
+*Butene---------
+*omega(comp)           -    /'1' 0.192/
+*Tc(comp)              K    /'1' 419.29/
+*Pc(comp)              Mpa  /'1' 4.0051/
+*RC318---------
+*omega(comp)           -    /'1' 0.3553/
+*Tc(comp)              K    /'1' 388.38/
+*Pc(comp)              Mpa  /'1' 2.7775/
+*1,3-Butadiene---------
+*omega(comp)           -    /'1' 0.192/
+*Tc(comp)              K    /'1' 425.14/
+*Pc(comp)              Mpa  /'1' 4.3053/
+*Perfluorobutane---------
+*omega(comp)           -    /'1' 0.372/
+*Tc(comp)              K    /'1' 386.33/
+*Pc(comp)              Mpa  /'1' 2.3224/
+*R236fa---------
+*omega(comp)           -    /'1' 0.377/
+*Tc(comp)              K    /'1' 398.07/
+*Pc(comp)              Mpa  /'1' 3.2/
+*Butane---------
+*omega(comp)           -    /'1' 0.201/
+*Tc(comp)              K    /'1' 425.13/
+*Pc(comp)              Mpa  /'1' 3.796/
+*trans-Butene---------
+*omega(comp)           -    /'1' 0.21/
+*Tc(comp)              K    /'1' 428.61/
+*Pc(comp)              Mpa  /'1' 4.0273/
+*Cyclobutene---------
+*omega(comp)           -    /'1' 0.163/
+*Tc(comp)              K    /'1' 448/
+*Pc(comp)              Mpa  /'1' 5.1495/
+*R114---------
+*omega(comp)           -    /'1' 0.2523/
+*Tc(comp)              K    /'1' 418.83/
+*Pc(comp)              Mpa  /'1' 3.257/
+*cis-Butene---------
+*omega(comp)           -    /'1' 0.202/
+*Tc(comp)              K    /'1' 435.75/
+*Pc(comp)              Mpa  /'1' 4.2255/
+*RE245cb2---------
+*omega(comp)           -    /'1' 0.354/
+*Tc(comp)              K    /'1' 406.81/
+*Pc(comp)              Mpa  /'1' 2.8864/
+*R236ea---------
+*omega(comp)           -    /'1' 0.369/
+*Tc(comp)              K    /'1' 412.44/
+*Pc(comp)              Mpa  /'1' 3.42/
+*1-Butyne---------
+*omega(comp)           -    /'1' 0.28/
+*Tc(comp)              K    /'1' 432/
+*Pc(comp)              Mpa  /'1' 4.1416/
+*R21---------
+*omega(comp)           -    /'1' 0.2061/
+*Tc(comp)              K    /'1' 451.48/
+*Pc(comp)              Mpa  /'1' 5.1812/
+*Neopentane---------
+*omega(comp)           -    /'1' 0.1961/
+*Tc(comp)              K    /'1' 433.74/
+*Pc(comp)              Mpa  /'1' 3.196/
+*R1234ze(Z)---------
+*omega(comp)           -    /'1' 0.327/
+*Tc(comp)              K    /'1' 423.27/
+*Pc(comp)              Mpa  /'1' 3.5306/
+*Ethylene oxide---------
+*omega(comp)           -    /'1' 0.21/
+*Tc(comp)              K    /'1' 468.92/
+*Pc(comp)              Mpa  /'1' 3.7047/
+*R1224yd(Z)---------
+*omega(comp)           -    /'1' 0.322/
+*Tc(comp)              K    /'1' 428.69/
+*Pc(comp)              Mpa  /'1' 3.337/
+*R245fa---------
+*omega(comp)           -    /'1' 0.3783/
+*Tc(comp)              K    /'1' 427.01/
+*Pc(comp)              Mpa  /'1' 3.651/
+*R1233zd(E)---------
+*omega(comp)           -    /'1' 0.3025/
+*Tc(comp)              K    /'1' 439.6/
+*Pc(comp)              Mpa  /'1' 3.6237/
+*R11---------
+*omega(comp)           -    /'1' 0.18875/
+*Tc(comp)              K    /'1' 471.11/
+*Pc(comp)              Mpa  /'1' 4.4076/
+*R245ca----------
+*omega(comp)           -    /'1' 0.355/
+*Tc(comp)              K    /'1' 447.57/
+*Pc(comp)              Mpa  /'1' 3.9407/
+*R123-----------
+*omega(comp)           -    /'1' 0.28192/
+*Tc(comp)              K    /'1' 456.83/
+*Pc(comp)              Mpa  /'1' 3.6618/
+*Isopentane-----------
+*omega(comp)           -    /'1' 0.2274/
+*Tc(comp)              K    /'1' 460.35/
+*Pc(comp)              Mpa  /'1' 3.378/
+*RE245fa2-----------
+*omega(comp)           -    /'1' 0.387/
+*Tc(comp)              K    /'1' 444.88/
+*Pc(comp)              Mpa  /'1' 3.433/
+*Perfluoropentane-----------
+*omega(comp)           -    /'1' 0.436/
+*Tc(comp)              K    /'1' 421/
+*Pc(comp)              Mpa  /'1' 2.063/
+*1-Pentene-----------
+*omega(comp)           -    /'1' 0.233/
+*Tc(comp)              K    /'1' 465.74/
+*Pc(comp)              Mpa  /'1' 3.598/
+*R141b-----------
+*omega(comp)           -    /'1' 0.2195/
+*Tc(comp)              K    /'1' 477.5/
+*Pc(comp)              Mpa  /'1' 4.212/
+*R1336mzz(Z)-----------
+*omega(comp)           -    /'1' 0.386/
+*Tc(comp)              K    /'1' 444.5/
+*Pc(comp)              Mpa  /'1' 2.903/
+*RE347mcc (HFE-7000)-----------
+*omega(comp)           -    /'1' 0.403/
+*Tc(comp)              K    /'1' 437.7/
+*Pc(comp)              Mpa  /'1' 2.4782/
+*Pentane-----------
+omega(comp)           -    /'1' 0.251/
+Tc(comp)              K    /'1' 469.7/
+Pc(comp)              Mpa  /'1' 3.3675/
+*R365mfc-----------
+*omega(comp)           -    /'1' 0.377/
+*Tc(comp)              K    /'1' 460/
+*c(comp)              Mpa  /'1' 3.266/
+*R113-----------
+*omega(comp)           -    /'1' 0.25253/
+*Tc(comp)              K    /'1' 487.21/
+*Pc(comp)              Mpa  /'1' 3.3922/
+*Cyclopentane-----------
+*omega(comp)           -    /'1' 0.202/
+*Tc(comp)              K    /'1' 511.72/
+*Pc(comp)              Mpa  /'1' 4.5828/
+*Perfluorohexane-----------
+*omega(comp)           -    /'1' 0.497/
+*Tc(comp)              K    /'1' 448/
+*Pc(comp)              Mpa  /'1' 1.7416/
+*2,3-Dimethylbutane-----------
+*omega(comp)           -    /'1' 0.247/
+*Tc(comp)              K    /'1' 500.6/
+*Pc(comp)              Mpa  /'1' 3.161/
+*Isohexane-----------
+*omega(comp)           -    /'1' 0.2797/
+*Tc(comp)              K    /'1' 497.7/
+*Pc(comp)              Mpa  /'1' 3.04/
+*3-Methylpentane-----------
+*omega(comp)           -    /'1' 0.268/
+*Tc(comp)              K    /'1' 506/
+*Pc(comp)              Mpa  /'1' 3.1845/
+
+
+*cp0(x)= p1*x+ p2  x=T/273
+*Isobutene--------------
+*cp0_p1(comp)          -    /'1' 59.93/
+*cp0_p2(comp)          -    /'1' 23.51/
+*Butene--------------
+*cp0_p1(comp)          -    /'1' 60.63/
+*cp0_p2(comp)          -    /'1' 18.82/
+*RC318--------------
+*cp0_p1(comp)          -    /'1' 80.4/
+*cp0_p2(comp)          -    /'1' 68.8/
+*1,3-Butadiene--------------
+*cp0_p1(comp)          -    /'1' 59.55/
+*cp0_p2(comp)          -    /'1' 14.81/
+*Perfluorobutane--------------
+*cp0_p1(comp)          -    /'1' 62.9/
+*cp0_p2(comp)          -    /'1' 136.7/
+*R236fa--------------
+*cp0_p1(comp)          -    /'1' 68.11/
+*cp0_p2(comp)          -    /'1' 50.28/
+*Butane--------------
+*cp0_p1(comp)          -    /'1' 70.47/
+*cp0_p2(comp)          -    /'1' 21.51/
+*trans-Butene--------------
+*cp0_p1(comp)          -    /'1' 57.12/
+*cp0_p2(comp)          -    /'1' 25.05/
+*Cyclobutene--------------
+*cp0_p1(comp)          -    /'1' 57.5/
+*cp0_p2(comp)          -    /'1' 1.136/
+*R114--------------
+*cp0_p1(comp)          -    /'1' 46.2/
+*cp0_p2(comp)          -    /'1' 67.89/
+*cis-Butene--------------
+*cp0_p1(comp)          -    /'1' 59.34/
+*cp0_p2(comp)          -    /'1' 15.87/
+*RE245cb2--------------
+*cp0_p1(comp)          -    /'1' 63.6/
+*cp0_p2(comp)          -    /'1' 67.25/
+*R236ea--------------
+*cp0_p1(comp)          -    /'1' 60.52/
+*cp0_p2(comp)          -    /'1' 62.97/
+*1-Butyne--------------
+*cp0_p1(comp)          -    /'1' 45.45/
+*cp0_p2(comp)          -    /'1' 37.54/
+*R21--------------
+*cp0_p1(comp)          -    /'1' 24.72/
+*cp0_p2(comp)          -    /'1' 34.18/
+*Neopentane--------------
+*cp0_p1(comp)          -    /'1' 94.417/
+*cp0_p2(comp)          -    /'1' 18.14/
+*R1234ze(Z)--------------
+*cp0_p1(comp)          -    /'1' 55.59/
+*cp0_p2(comp)          -    /'1' 33.37/
+*Ethylene oxide--------------
+*cp0_p1(comp)          -    /'1' 38.87/
+*cp0_p2(comp)          -    /'1' 5.463/
+*R1224yd(Z)--------------
+*cp0_p1(comp)          -    /'1' 50.53/
+*cp0_p2(comp)          -    /'1' 58.05/
+*R245fa--------------
+*cp0_p1(comp)          -    /'1' 63.88/
+*cp0_p2(comp)          -    /'1' 45.7/
+*R1233zd(E)--------------
+*cp0_p1(comp)          -    /'1' 46.95/
+*cp0_p2(comp)          -    /'1' 53.17/
+*R11--------------
+*cp0_p1(comp)          -    /'1' 24.02/
+*cp0_p2(comp)          -    /'1' 52.78/
+*R245ca--------------
+*cp0_p1(comp)          -    /'1' 70.18/
+*cp0_p2(comp)          -    /'1' 43.28/
+*R123----------------
+*cp0_p1(comp)          -    /'1' 43.21/
+*cp0_p2(comp)          -    /'1' 56/
+*Isopentane----------------
+*cp0_p1(comp)          -    /'1' 91.2/
+*cp0_p2(comp)          -    /'1' 19.42/
+*RE245fa2----------------
+*cp0_p1(comp)          -    /'1' 64.02/
+*cp0_p2(comp)          -    /'1' 65.9/
+*Perfluoropentane----------------
+*cp0_p1(comp)          -    /'1' 108/
+*cp0_p2(comp)          -    /'1' 114.8/
+*1-Pentene-----------------
+*cp0_p1(comp)          -    /'1' 77.09/
+*cp0_p2(comp)          -    /'1' 25.26/
+*R141b-----------------
+*cp0_p1(comp)          -    /'1' 43.08/
+*cp0_p2(comp)          -    /'1' 41.34/
+*R1336mzz(Z)-----------------
+*cp0_p1(comp)          -    /'1' 69.6/
+*cp0_p2(comp)          -    /'1' 63.35/
+*RE347mcc (HFE-7000)-----------------
+*cp0_p1(comp)          -    /'1' 81.77/
+*cp0_p2(comp)          -    /'1' 91.12/
+*Pentane-----------------
+cp0_p1(comp)          -    /'1' 86.63/
+cp0_p2(comp)          -    /'1' 25.51/
+*R365mfc-----------------
+*cp0_p1(comp)          -    /'1' 71.41/
+*cp0_p2(comp)          -    /'1' 67.96/
+*R113-----------------
+*cp0_p1(comp)          -    /'1' 46.83/
+*cp0_p2(comp)          -    /'1' 70.71/
+*Cyclopentane-----------------
+*cp0_p1(comp)          -    /'1' 94.52/
+*cp0_p2(comp)          -    /'1' -19.84/
+*Perfluorohexane-----------------
+*cp0_p1(comp)          -    /'1' 121/
+*cp0_p2(comp)          -    /'1' 144.8/
+*2,3-Dimethylbutane-----------------
+*cp0_p1(comp)          -    /'1' 108.6/
+*cp0_p2(comp)          -    /'1' 22.72/
+*Isohexane-----------------
+*cp0_p1(comp)          -    /'1' 110.5/
+*cp0_p2(comp)          -    /'1' 21.78/
+*3-Methylpentane-----------------
+*cp0_p1(comp)          -    /'1' 111.7/
+*cp0_p2(comp)          -    /'1' 17.84/
+
+R                    J.K-1.mol-1 /8.314/
+f_omega(comp)         -
+ac(comp)              -
+b(comp)               -
+T_ref                  -    /298/
+P_ref                  -    /0.001/
+
+*initialization from the nominal condition
+Tini(state)           K
+P_low_ini             Mpa
+P_high_ini            Mpa
+m_wf_ini
+Z_v_ini(state_v)
+Z_l_ini(state_l)
+v1,v2,v3
+A_eva,A_cond
+T_hso_1_ini,T_hso_2_ini,T_hso_3_ini,T_hso_4_ini
+T_hsi_1_ini,T_hsi_2_ini,T_hsi_3_ini,T_hsi_4_ini
+*end-------
+T_hso_n                 K    /433/
+T_hsi_n                 K    /291/
+mCp_hso_n               J.K-1.s-1 /4200/
+mCp_hsi               J.K-1.s-1 /8000/
+alpha_hso             W.m2.K-1  /350/
+alpha_hsi             W.m2.K-1  /2000/
+alpha_wf_l            W.m2.K-1  /2500/
+alpha_wf_v            W.m2.K-1  /400/
+alpha_wf_tp           W.m2.K-1  /8000/
+U_eva_1,U_eva_2,U_eva_3
+U_cond_1,U_cond_2,U_cond_3
+;
+$load v1,v2,v3,Tini,m_wf_ini,P_low_ini,P_high_ini,Z_v_ini,Z_l_ini,A_eva,A_cond,T_hso_1_ini,T_hso_2_ini,T_hso_3_ini,T_hso_4_ini,T_hsi_1_ini,T_hsi_2_ini,T_hsi_3_ini,T_hsi_4_ini
+
+f_omega(comp)=0.37464+1.54226*omega(comp)-0.26992*omega(comp)*omega(comp);
+ac(comp)=0.45724*R*R*Tc(comp)*Tc(comp)/Pc(comp);
+b(comp)=0.0778*R*Tc(comp)/Pc(comp);
+U_eva_1=1/(1/alpha_hso+1/alpha_wf_v);
+U_eva_2=1/(1/alpha_hso+1/alpha_wf_tp);
+U_eva_3=1/(1/alpha_hso+1/alpha_wf_l);
+U_cond_1=1/(1/alpha_hsi+1/alpha_wf_v);
+U_cond_2=1/(1/alpha_hsi+1/alpha_wf_tp);
+U_cond_3=1/(1/alpha_hsi+1/alpha_wf_l);
+
+
+variables
+*thermo variables
+x(comp,state_l)
+y(comp,state_v)
+P(state)
+P_low
+P_high
+P_inte
+T(state)
+bm_v(state_v)
+bm_l(state_l)
+a(comp,state)
+am_v(state_v)
+am_l(state_l)
+Z_v(state_v)
+Z_l(state_l)
+AA_v(state_v)
+AA_l(state_l)
+BB_v(state_v)
+BB_l(state_l)
+H_ideal(comp,state)
+H_res_v(state_v)
+H_res_l(state_l)
+H_total_v(state_v)
+H_total_l(state_l)
+S_ideal(comp,state)
+S_res_v(state_v)
+S_res_l(state_l)
+S_total_v(state_v)
+S_total_l(state_l)
+da_dT_v(state_v)
+da_dT_l(state_l)
+logphi_v_1(comp,state_v),logphi_v_2(comp,state_v),logphi_v_3(comp,state_v),logphi_v(comp,state_v)
+logphi_l_1(comp,state_l),logphi_l_2(comp,state_l),logphi_l_3(comp,state_l),logphi_l(comp,state_l)
+*process variables
+W_pum_1,W_pum_2,W_pum,N_pum,X_factor,eta_pum
+W_ex_1,W_ex_2,W_ex
+m_wf
+Q_eva_1,Q_eva_2,Q_eva_3
+Q_cond_1,Q_cond_2,Q_cond_3
+T_hso_1,T_hso_2,T_hso_3,T_hso_4
+T_hsi_1,T_hsi_2,T_hsi_3,T_hsi_4
+T_eva_mean_1,T_eva_mean_2,T_eva_mean_3
+T_cond_mean_1,T_cond_mean_2,T_cond_mean_3
+A_eva_1,A_eva_2,A_eva_3
+A_cond_1,A_cond_2,A_cond_3
+exergy_eff
+scale_factor
+mCp_hso
+;
+
+x.fx(comp,state_l)=1;
+y.fx(comp,state_v)=1;
+T.l(state)=Tini(state); T.lo(state)=271; T.up(state)=453;
+P_low.l=P_low_ini;P_low.lo=0.1;P_low.up=2;
+P_high.l=P_high_ini;P_high.lo=0.1;P_high.up=2;
+P_inte.l=P_low_ini;P_inte.lo=0.1;P_inte.up=2;
+P.l(state_low)=P_low.l; P.lo(state_low)=0.1;
+P.l(state_high)=P_high.l; P.up(state_high)=2;
+P.l('5')=P_low.l; P.lo('5')=0.1; P.up('5')=2;
+bm_v.l(state_v)=sum(comp,y.l(comp,state_v)*b(comp));
+bm_l.l(state_l)=sum(comp,x.l(comp,state_l)*b(comp));
+a.l(comp,state)=ac(comp)*(1+f_omega(comp)*(1-(T.l(state)/Tc(comp))**0.5))**2;
+am_v.l(state_v)=sum((comp,comp1),y.l(comp,state_v)*y.l(comp1,state_v)*a.l(comp,state_v)**0.5*a.l(comp1,state_v)**0.5);
+am_l.l(state_l)=sum((comp,comp1),x.l(comp,state_l)*x.l(comp1,state_l)*a.l(comp,state_l)**0.5*a.l(comp1,state_l)**0.5);
+AA_v.l(state_v)=am_v.l(state_v)*P.l(state_v)/R/R/T.l(state_v)/T.l(state_v);
+AA_l.l(state_l)=am_l.l(state_l)*P.l(state_l)/R/R/T.l(state_l)/T.l(state_l);
+BB_v.l(state_v)=bm_v.l(state_v)*P.l(state_v)/R/T.l(state_v);
+BB_l.l(state_l)=bm_l.l(state_l)*P.l(state_l)/R/T.l(state_l);
+Z_v.l(state_v)=Z_v_ini(state_v); Z_v.up(state_v)=1;Z_v.lo(state_v)=0.01;
+Z_l.l(state_l)=Z_l_ini(state_l);Z_l.up(state_l)=1;Z_l.lo(state_l)=0.00000001;
+H_ideal.l(comp,state)=cp0_p1(comp)/273/2*(T.l(state)**2-T_ref**2)+cp0_p2(comp)*(T.l(state)-T_ref);
+S_ideal.l(comp,state)=cp0_p1(comp)/273*(T.l(state)-T_ref)+cp0_p2(comp)*log(T.l(state)/T_ref)-R*log(P.l(state)/P_ref); ;
+da_dT_v.l(state_v)=-R/2*(0.45724)**0.5/T.l(state_v)**0.5*sum((comp,comp1),y.l(comp,state_v)*y.l(comp1,state_v)*(f_omega(comp)*
+               (a.l(comp1,state_v)*Tc(comp)/Pc(comp))**0.5+f_omega(comp1)*(a.l(comp,state_v)*Tc(comp1)/Pc(comp1))**0.5));
+da_dT_l.l(state_l)=-R/2*(0.45724)**0.5/T.l(state_l)**0.5*sum((comp,comp1),x.l(comp,state_l)*x.l(comp1,state_l)*(f_omega(comp)*
+               (a.l(comp1,state_l)*Tc(comp)/Pc(comp))**0.5+f_omega(comp1)*(a.l(comp,state_l)*Tc(comp1)/Pc(comp1))**0.5));
+H_res_v.l(state_v)=R*T.l(state_v)*(Z_v.l(state_v)-1)+(am_v.l(state_v)-T.l(state_v)*da_dT_v.l(state_v))/2.82843/bm_v.l(state_v)*
+                   log((2*Z_v.l(state_v)-0.82843*BB_v.l(state_v))/(2*Z_v.l(state_v)+4.82843*BB_v.l(state_v)));
+H_res_l.l(state_l)=R*T.l(state_l)*(Z_l.l(state_l)-1)+(am_l.l(state_l)-T.l(state_l)*da_dT_l.l(state_l))/2.82843/bm_l.l(state_l)*
+                   log((2*Z_l.l(state_l)-0.82843*BB_l.l(state_l))/(2*Z_l.l(state_l)+4.82843*BB_l.l(state_l)));
+H_total_v.l(state_v)=sum(comp,y.l(comp,state_v)*H_ideal.l(comp,state_v))+H_res_v.l(state_v);
+H_total_l.l(state_l)=sum(comp,x.l(comp,state_l)*H_ideal.l(comp,state_l))+H_res_l.l(state_l);
+S_res_v.l(state_v)=R*log(Z_v.l(state_v)-BB_v.l(state_v))-da_dT_v.l(state_v)/2.82843/bm_v.l(state_v)*
+                   log((2*Z_v.l(state_v)-0.82843*BB_v.l(state_v))/(2*Z_v.l(state_v)+4.82843*BB_v.l(state_v)));
+S_res_l.l(state_l)=R*log(Z_l.l(state_l)-BB_l.l(state_l))-da_dT_l.l(state_l)/2.82843/bm_l.l(state_l)*
+                   log((2*Z_l.l(state_l)-0.82843*BB_l.l(state_l))/(2*Z_l.l(state_l)+4.82843*BB_l.l(state_l)));
+S_total_v.l(state_v)=sum(comp,y.l(comp,state_v)*S_ideal.l(comp,state_v))+S_res_v.l(state_v);
+S_total_l.l(state_l)=sum(comp,x.l(comp,state_l)*S_ideal.l(comp,state_l))+S_res_l.l(state_l);
+logphi_v_1.l(comp,state_v)=2*a.l(comp,state_v)**0.5/am_v.l(state_v)*sum(comp1,y.l(comp1,state_v)*a.l(comp1,state_v)**0.5)-b(comp)/bm_v.l(state_v);
+logphi_v_2.l(comp,state_v)=AA_v.l(state_v)/2.82843/BB_v.l(state_v)*log((2*Z_v.l(state_v)-0.82843*BB_v.l(state_v))/(2*Z_v.l(state_v)+4.82843*BB_v.l(state_v)));
+logphi_v_3.l(comp,state_v)=-log(Z_v.l(state_v)-BB_v.l(state_v))+b(comp)/bm_v.l(state_v)*(Z_v.l(state_v)-1);
+logphi_v.l(comp,state_v)=logphi_v_1.l(comp,state_v)*logphi_v_2.l(comp,state_v)+logphi_v_3.l(comp,state_v);
+logphi_l_1.l(comp,state_l)=2*a.l(comp,state_l)**0.5/am_l.l(state_l)*sum(comp1,x.l(comp1,state_l)*a.l(comp1,state_l)**0.5)-b(comp)/bm_l.l(state_l);
+logphi_l_2.l(comp,state_l)=AA_l.l(state_l)/2.82843/BB_l.l(state_l)*log((2*Z_l.l(state_l)-0.82843*BB_l.l(state_l))/(2*Z_l.l(state_l)+4.82843*BB_l.l(state_l)));
+logphi_l_3.l(comp,state_l)=-log(Z_l.l(state_l)-BB_l.l(state_l))+b(comp)/bm_l.l(state_l)*(Z_l.l(state_l)-1);
+logphi_l.l(comp,state_l)=logphi_l_1.l(comp,state_l)*logphi_l_2.l(comp,state_l)+logphi_l_3.l(comp,state_l);
+m_wf.l=m_wf_ini;m_wf.lo=m_wf_ini/2*1.6;m_wf.up=m_wf_ini/2*2.7;
+W_pum_1.l=m_wf.l*(H_total_l.l('10')-H_total_l.l('9'));
+W_pum_2.l=m_wf.l*(H_total_l.l('1')-H_total_l.l('10'));
+W_pum.l=W_pum_1.l+W_pum_2.l;
+N_pum.l=1.5;N_pum.lo=1;N_pum.up=3;
+X_factor.l=0.7;X_factor.lo=0.3;X_factor.up=1;
+eta_pum.l=0.7;eta_pum.lo=0.3; eta_pum.up=0.71;
+W_ex_1.l=m_wf.l*(H_total_v.l('4')-H_total_v.l('5'));
+W_ex_2.l=m_wf.l*(H_total_v.l('5')-H_total_v.l('6'));
+W_ex.l=W_ex_1.l+W_ex_2.l;
+Q_eva_1.l=m_wf.l*(H_total_v.l('4')-H_total_v.l('3')); Q_eva_1.lo=0;
+Q_eva_2.l=m_wf.l*(H_total_v.l('3')-H_total_l.l('2')); Q_eva_2.lo=0;
+Q_eva_3.l=m_wf.l*(H_total_l.l('2')-H_total_l.l('1')); Q_eva_3.lo=0;
+Q_cond_1.l=m_wf.l*(H_total_v.l('6')-H_total_v.l('7')); Q_cond_1.lo=0;
+Q_cond_2.l=m_wf.l*(H_total_v.l('7')-H_total_l.l('8')); Q_cond_2.lo=0;
+Q_cond_3.l=m_wf.l*(H_total_l.l('8')-H_total_l.l('9')); Q_cond_3.lo=0;
+mCp_hso.l=mCp_hso_n;mCp_hso.lo=0.8*mCp_hso_n;mCp_hso.up=1.2*mCp_hso_n;
+T_hso_1.l=T_hso_1_ini;T_hso_2.l=T_hso_2_ini;T_hso_3.l=T_hso_3_ini;T_hso_4.l=T_hso_4_ini;
+T_hso_1.lo=T_hso_n-30;T_hso_1.up=T_hso_n+30;
+T_hsi_1.l=T_hsi_1_ini;T_hsi_2.l=T_hsi_2_ini;T_hsi_3.l=T_hsi_3_ini;T_hsi_4.l=T_hsi_4_ini;
+T_hsi_1.lo=T_hsi_n-15;T_hsi_1.up=T_hsi_n+15;
+T_eva_mean_1.l=(T_hso_1.l+T_hso_2.l-T.l('4')-T.l('3'))/2;
+T_eva_mean_2.l=(T_hso_2.l+T_hso_3.l-T.l('3')-T.l('2'))/2;
+T_eva_mean_3.l=(T_hso_3.l+T_hso_4.l-T.l('2')-T.l('1'))/2;
+T_cond_mean_1.l=-(T_hsi_4.l+T_hsi_3.l-T.l('6')-T.l('7'))/2;
+T_cond_mean_2.l=-(T_hsi_3.l+T_hsi_2.l-T.l('7')-T.l('8'))/2;
+T_cond_mean_3.l=-(T_hsi_2.l+T_hsi_1.l-T.l('8')-T.l('9'))/2;
+exergy_eff.l=0.043;exergy_eff.lo=0;
+
+
+Equations
+*Thermodynamics---------------------------------------------------------------------------------------
+e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16,e17,e18,e19,e20,e21,e22,e23,e24,e25,e26,e27,e28,e29,e30,e31,
+e32,e33,e34,e35,e36,e37,e38,e39,e40,e41,e42,e43,e44,e45,e46,e47,e48,e49,e50,e51,e52,e53,e54,e55,e56,e57,e58,e59,e60,
+e61,e62,e63,e64,e65,e66,e67,e68,e69,e70,e71,e72,e73,e74,e75,e76,e77,e78,e79,e80,e81,e82,e83,e84,e85,e86,e87,e88,e89,
+e90,e91,e92,e93,e94,e95,e96,e97
+;
+
+e1(state_v)..bm_v(state_v)=e=sum(comp,y(comp,state_v)*b(comp));
+e2(state_l)..bm_l(state_l)=e=sum(comp,x(comp,state_l)*b(comp));
+e3(comp,state)..a(comp,state)=e=ac(comp)*(1+f_omega(comp)*(1-(T(state)/Tc(comp))**0.5))**2;
+e4(state_v)..am_v(state_v)=e=sum((comp,comp1),y(comp,state_v)*y(comp1,state_v)*a(comp,state_v)**0.5*a(comp1,state_v)**0.5);
+e5(state_l)..am_l(state_l)=e=sum((comp,comp1),x(comp,state_l)*x(comp1,state_l)*a(comp,state_l)**0.5*a(comp1,state_l)**0.5);
+e6(state_v)..AA_v(state_v)=e=am_v(state_v)*P(state_v)/R/R/T(state_v)/T(state_v);
+e7(state_l)..AA_l(state_l)=e=am_l(state_l)*P(state_l)/R/R/T(state_l)/T(state_l);
+e8(state_v)..BB_v(state_v)=e=bm_v(state_v)*P(state_v)/R/T(state_v);
+e9(state_l)..BB_l(state_l)=e=bm_l(state_l)*P(state_l)/R/T(state_l);
+e10(state_v)..0=e=Z_v(state_v)**3-(1-BB_v(state_v))*Z_v(state_v)**2-(2*BB_v(state_v)-AA_v(state_v)+
+            3*BB_v(state_v)*BB_v(state_v))*Z_v(state_v)-(AA_v(state_v)*BB_v(state_v)-BB_v(state_v)**2-BB_v(state_v)**3);
+e11(state_l)..0=e=Z_l(state_l)**3-(1-BB_l(state_l))*Z_l(state_l)**2-(2*BB_l(state_l)-AA_l(state_l)+
+            3*BB_l(state_l)*BB_l(state_l))*Z_l(state_l)-(AA_l(state_l)*BB_l(state_l)-BB_l(state_l)**2-BB_l(state_l)**3);
+e12(comp,state)..H_ideal(comp,state)=e=cp0_p1(comp)/273/2*(T(state)**2-T_ref**2)+cp0_p2(comp)*(T(state)-T_ref);
+e13(comp,state)..S_ideal(comp,state)=e=cp0_p1(comp)/273*(T(state)-T_ref)+cp0_p2(comp)*log(T(state)/T_ref)-R*log(P(state)/P_ref);
+e14(state_v)..da_dT_v(state_v)=e=-R/2*(0.45724)**0.5/T(state_v)**0.5*sum((comp,comp1),y(comp,state_v)*y(comp1,state_v)*(f_omega(comp)*
+               (a(comp1,state_v)*Tc(comp)/Pc(comp))**0.5+f_omega(comp1)*(a(comp,state_v)*Tc(comp1)/Pc(comp1))**0.5));
+e15(state_l)..da_dT_l(state_l)=e=-R/2*(0.45724)**0.5/T(state_l)**0.5*sum((comp,comp1),x(comp,state_l)*x(comp1,state_l)*(f_omega(comp)*
+               (a(comp1,state_l)*Tc(comp)/Pc(comp))**0.5+f_omega(comp1)*(a(comp,state_l)*Tc(comp1)/Pc(comp1))**0.5));
+e16(state_v)..H_res_v(state_v)=e=R*T(state_v)*(Z_v(state_v)-1)+(am_v(state_v)-T(state_v)*da_dT_v(state_v))/2.82843/bm_v(state_v)*
+                   log((2*Z_v(state_v)-0.82843*BB_v(state_v))/(2*Z_v(state_v)+4.82843*BB_v(state_v)));
+e17(state_l)..H_res_l(state_l)=e=R*T(state_l)*(Z_l(state_l)-1)+(am_l(state_l)-T(state_l)*da_dT_l(state_l))/2.82843/bm_l(state_l)*
+                   log((2*Z_l(state_l)-0.82843*BB_l(state_l))/(2*Z_l(state_l)+4.82843*BB_l(state_l)));
+e18(state_v)..H_total_v(state_v)=e=sum(comp,y(comp,state_v)*H_ideal(comp,state_v))+H_res_v(state_v);
+e19(state_l)..H_total_l(state_l)=e=sum(comp,x(comp,state_l)*H_ideal(comp,state_l))+H_res_l(state_l);
+e20(state_v)..S_res_v(state_v)=e=R*log(Z_v(state_v)-BB_v(state_v))-da_dT_v(state_v)/2.82843/bm_v(state_v)*
+                   log((2*Z_v(state_v)-0.82843*BB_v(state_v))/(2*Z_v(state_v)+4.82843*BB_v(state_v)));
+e21(state_l)..S_res_l(state_l)=e=R*log(Z_l(state_l)-BB_l(state_l))-da_dT_l(state_l)/2.82843/bm_l(state_l)*
+                   log((2*Z_l(state_l)-0.82843*BB_l(state_l))/(2*Z_l(state_l)+4.82843*BB_l(state_l)));
+e22(state_v)..S_total_v(state_v)=e=sum(comp,y(comp,state_v)*S_ideal(comp,state_v))+S_res_v(state_v);
+e23(state_l)..S_total_l(state_l)=e=sum(comp,x(comp,state_l)*S_ideal(comp,state_l))+S_res_l(state_l);
+e24(comp,state_v)..logphi_v_1(comp,state_v)=e=2*a(comp,state_v)**0.5/am_v(state_v)*sum(comp1,y(comp1,state_v)*a(comp1,state_v)**0.5)-b(comp)/bm_v(state_v);
+e25(comp,state_v)..logphi_v_2(comp,state_v)=e=AA_v(state_v)/2.82843/BB_v(state_v)*log((2*Z_v(state_v)-0.82843*BB_v(state_v))/(2*Z_v(state_v)+4.82843*BB_v(state_v)));
+e26(comp,state_v)..logphi_v_3(comp,state_v)=e=-log(Z_v(state_v)-BB_v(state_v))+b(comp)/bm_v(state_v)*(Z_v(state_v)-1);
+e27(comp,state_v)..logphi_v(comp,state_v)=e=logphi_v_1(comp,state_v)*logphi_v_2(comp,state_v)+logphi_v_3(comp,state_v);
+e28(comp,state_l)..logphi_l_1(comp,state_l)=e=2*a(comp,state_l)**0.5/am_l(state_l)*sum(comp1,x(comp1,state_l)*a(comp1,state_l)**0.5)-b(comp)/bm_l(state_l);
+e29(comp,state_l)..logphi_l_2(comp,state_l)=e=AA_l(state_l)/2.82843/BB_l(state_l)*log((2*Z_l(state_l)-0.82843*BB_l(state_l))/(2*Z_l(state_l)+4.82843*BB_l(state_l)));
+e30(comp,state_l)..logphi_l_3(comp,state_l)=e=-log(Z_l(state_l)-BB_l(state_l))+b(comp)/bm_l(state_l)*(Z_l(state_l)-1);
+e31(comp,state_l)..logphi_l(comp,state_l)=e=logphi_l_1(comp,state_l)*logphi_l_2(comp,state_l)+logphi_l_3(comp,state_l);
+e32(state_l)..3*Z_l(state_l)**2-2*(1-BB_l(state_l))*Z_l(state_l)-(2*BB_l(state_l)-AA_l(state_l)+3*BB_l(state_l)*BB_l(state_l))=g=0;
+e33(state_l)..6*Z_l(state_l)-2*(1-BB_l(state_l))=l=0;
+e34(state_v)..3*Z_v(state_v)**2-2*(1-BB_v(state_v))*Z_v(state_v)-(2*BB_v(state_v)-AA_v(state_v)+3*BB_v(state_v)*BB_v(state_v))=g=0;
+e35(state_v)..6*Z_v(state_v)-2*(1-BB_v(state_v))=g=0;
+*end---------------------------------------------------------------------------------
+*MESH--------------------------------------------------------------------------------
+**no material balance
+**equilibrium
+e36(comp)..exp(logphi_v(comp,'2'))*y(comp,'2')=e=exp(logphi_l(comp,'2'))*x(comp,'2');
+e37(comp)..exp(logphi_v(comp,'3'))*y(comp,'3')=e=exp(logphi_l(comp,'3'))*x(comp,'3');
+e38(comp)..exp(logphi_v(comp,'7'))*y(comp,'7')=e=exp(logphi_l(comp,'7'))*x(comp,'7');
+e39(comp)..exp(logphi_v(comp,'8'))*y(comp,'8')=e=exp(logphi_l(comp,'8'))*x(comp,'8');
+**summation
+e40(state_v)..sum(comp,y(comp,state_v))=e=1;
+e41(state_l)..sum(comp,x(comp,state_l))=e=1;
+**heat
+e42..W_pum_1=e=m_wf*Z_l('9')*8.314*T('9')/P('9')*(P_high-P_low);
+e43..W_pum_2=e=m_wf*(H_total_l('1')-H_total_l('10'));
+e44..W_pum_1*(1-eta_pum)=e=W_pum_2*eta_pum;
+e45..W_pum=e=W_pum_1/eta_pum;
+e46..X_factor=e=m_wf/(m_wf_ini/0.7)/N_pum*1.5;
+e47..eta_pum=e=-1.333*X_factor*X_factor+1.933*X_factor;
+e48..P_high-P_low=e=(-0.2381*X_factor*X_factor-0.2619*X_factor+1.3)*(P_high_ini-P_low_ini)/2.25*N_pum*N_pum;
+e49..W_ex_1=e=m_wf*(H_total_v('4')-H_total_v('5'));
+e50..W_ex_2=e=m_wf*(H_total_v('5')-H_total_v('6'));
+e51..Z_v('5')*8.314*T('5')/P('5')*(P('5')-P('6'))=e=H_total_v('5')-H_total_v('6');
+e52..P_high=e=(P_high_ini/P_low_ini)*P('5');
+e53..T('5')=g=T('7');
+e54..S_total_v('4')=e=S_total_v('5');
+e55..W_ex=e=(W_ex_1+W_ex_2)*0.7;
+e56..Q_eva_1=e=m_wf*(H_total_v('4')-H_total_v('3'));
+e57..Q_eva_2=e=m_wf*(H_total_v('3')-H_total_l('2'));
+e58..Q_eva_3=e=m_wf*(H_total_l('2')-H_total_l('1'));
+e59..Q_cond_1=e=m_wf*(H_total_v('6')-H_total_v('7'));
+e60..Q_cond_2=e=m_wf*(H_total_v('7')-H_total_l('8'));
+e61..Q_cond_3=e=m_wf*(H_total_l('8')-H_total_l('9'));
+e62..Q_eva_1=e=mCp_hso*(T_hso_1-T_hso_2);
+e63..Q_eva_2=e=mCp_hso*(T_hso_2-T_hso_3);
+e64..Q_eva_3=e=mCp_hso*(T_hso_3-T_hso_4);
+e65..Q_cond_1=e=mCp_hsi*(T_hsi_4-T_hsi_3);
+e66..Q_cond_2=e=mCp_hsi*(T_hsi_3-T_hsi_2);
+e67..Q_cond_3=e=mCp_hsi*(T_hsi_2-T_hsi_1);
+*end----------------------------------------------------------------------------
+*equipment model----------------------------------------------------------------
+e68..T_eva_mean_1=e=(T_hso_1+T_hso_2-T('4')-T('3'))/2;
+e69..T_eva_mean_2=e=(T_hso_2+T_hso_3-T('3')-T('2'))/2;
+e70..T_eva_mean_3=e=(T_hso_3+T_hso_4-T('2')-T('1'))/2;
+e71..T_cond_mean_1=e=-(T_hsi_4+T_hsi_3-T('6')-T('7'))/2;
+e72..T_cond_mean_2=e=-(T_hsi_3+T_hsi_2-T('7')-T('8'))/2;
+e73..T_cond_mean_3=e=-(T_hsi_2+T_hsi_1-T('8')-T('9'))/2;
+e74..Q_eva_1=e=U_eva_1*A_eva_1*T_eva_mean_1;
+e75..Q_eva_2=e=U_eva_2*A_eva_2*T_eva_mean_2;
+e76..Q_eva_3=e=U_eva_3*A_eva_3*T_eva_mean_3;
+e77..Q_cond_1=e=U_cond_1*A_cond_1*T_cond_mean_1;
+e78..Q_cond_2=e=U_cond_2*A_cond_2*T_cond_mean_2;
+e79..Q_cond_3=e=U_cond_3*A_cond_3*T_cond_mean_3;
+e80..A_eva_1+A_eva_2+A_eva_3=e=A_eva;
+e81..A_cond_1+A_cond_2+A_cond_3=e=A_cond;
+*end----------------------------------------------------------------------------
+*constaints---------------------------------------------------------------------
+*heat exchanger minimal temperature difference-------------------------------------------------
+e82..T_hso_4-T('1')=g=0;
+e83..T_hso_3-T('2')=g=0;
+e84..T_hso_2-T('3')=g=0;
+e85..T_hso_1-T('4')=g=0;
+e86..T('6')-T_hsi_4=g=0;
+e87..T('7')-T_hsi_3=g=0;
+e88..T('8')-T_hsi_2=g=0;
+e89..T('9')-T_hsi_1=g=0;
+*heat exchanger negligible pressure drop
+e90(state_low)..P(state_low)=e=P_low;
+e91(state_high)..P(state_high)=e=P_high;
+*pump
+e92..T('10')=e=T('9');
+e93..exergy_eff=e=W_ex/mCp_hso/(T_hso_1-T_hsi_1-2);
+e94(state_l)..Z_l(state_l)-BB_l(state_l)=g=0.00001;
+e95..T_hso_1=e=T_hso_n+scale_factor*v1*30;
+e96..T_hsi_1=e=T_hsi_n+scale_factor*v2*15;
+e97..mCp_hso=e=mCp_hso_n+scale_factor*v3*mCp_hso_n*0.2;
+
+
+Model ORC_off_design /all/
+
+Option
+nlp=conopt;
+OPTION DOMLIM =99999;
+
+solve ORC_off_design using nlp maximizing scale_factor;
+
+Parameters
+smodel,ssolver;
+smodel=ORC_off_design.modelstat;
+ssolver=ORC_off_design.solvestat;
+execute_unload %matout%;

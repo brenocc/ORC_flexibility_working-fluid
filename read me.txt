@@ -1,0 +1,4 @@
+1.These files are used to assess the volumetric flexibiltiy index of an organic-rankine cycle appying different working fluids;
+2.Run the "ORC_opt_feasibility.m" matlab file and it is better to put the gams files in the same folder path; 
+3.The file routes need to be specified before running the code;
+4.More details on the development and descriptions of these files could be found in our paper DOI: XXXX
